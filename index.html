@@ -13,10 +13,45 @@ console.log(nombre);
 const edad=23;
 console.log(edad);
 
-//LET definir variables de bloque el alcance esta definido entre {}
+//LET definir variables de bloque el alcance esta definido entre {} 
+
 let apellido;
 apellido='gerardo';
 console.log(apellido);
+
+//LET Y CONST son de bloque
+
+{
+    let a = 'jorge';
+    console.log(a);
+}
+
+
+
+//FUNCION ANONIMA - SI NO DEFINO LA VARIABLE NO SE HACE DOBLE PASAJE ASI QUE LA EJECUCION DE LA FUNCION DEBE
+//ESTAR DESPUES DE LA DEFINICION DE LA VARIABLE
+
+var saludar = function(){
+    console.log(apellido);
+    
+}
+
+saludar();
+apellido='Miguel';
+saludar();
+
+//ARROW FUNCTION
+
+saludar = () => {console.log('heyo')};
+saludar = nombre => {console.log(nombre)}; //SI ES UN SOLO PARAMETRO NO HACE FALTA PARENTESIS
+saludar = (nombre,apellido)=>nombre+''+apellido; //EL CUERPO DE LA FUNCION ES SOLO UN RETURN
+
+var saludar_dos = (parametro) => {console.log(parametro)};
+console.log(saludar('Ramon','Perez'));
+saludar_dos('roberto');
+
+saludar = nombre=>nombre+' Y apellido'; //VERSION MAS RESUMIDA
+console.log(saludar('Martin'));
 
 </script>
 </body>
