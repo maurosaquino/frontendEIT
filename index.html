@@ -2,7 +2,15 @@
 <body>
 
 <h1 id='titulo'>TITULO</h1>
+<h2 class='subtitulo'>TITULO</h2>
+<style>
 
+    .titulo{
+        color:red;
+        font-size:48px;
+    }
+
+</style>
 <script>    
 var nombre;
 
@@ -63,12 +71,20 @@ window.location; // Toda la informacion del host y la ubicacion de la pagina
 window.document; // Es la informacion del nodo de la estructura del desgloce del documento.
 
 var h1 = document.getElementById('titulo');
+var h2 = document.getElementsByClassName('subtitulo');
 
 document.getElementById('titulo').innerText='APELLIDO'; //no reconoce las tags
 document.getElementById('titulo').innerHTML='NOMBRE'; //reconoce las tags
 h1.textContent='lala'; //???? BUSCAR DIFERENCIA ENTRE INNERTEXT o TEXTCONTENT
 
 console.log(document.getElementById('titulo'));
+console.log(h2[0].innerHTML);
+
+h2[0].id ='nuevoID';
+
+h2[0].classList.add('titulo'); //LE AGREGO UNA CLASE A LA LISTA DE CLASES
+h2[0].classList.toggle('subtitulo');
+
 
 </script>
 </body>
