@@ -1,6 +1,9 @@
 <html>
 <body>
-<script>   
+
+<h1 id='titulo'>TITULO</h1>
+
+<script>    
 var nombre;
 
 //VAR original son variables globales
@@ -52,6 +55,20 @@ saludar_dos('roberto');
 
 saludar = nombre=>nombre+' Y apellido'; //VERSION MAS RESUMIDA
 console.log(saludar('Martin'));
+
+window.innerHeight; //DICE CUANTO MIDE LA VENTANA el WINDOW.XXXX son las propiedades o atributos del objeto window
+
+window.history;
+window.location; // Toda la informacion del host y la ubicacion de la pagina
+window.document; // Es la informacion del nodo de la estructura del desgloce del documento.
+
+var h1 = document.getElementById('titulo');
+
+document.getElementById('titulo').innerText='APELLIDO'; //no reconoce las tags
+document.getElementById('titulo').innerHTML='NOMBRE'; //reconoce las tags
+h1.textContent='lala'; //???? BUSCAR DIFERENCIA ENTRE INNERTEXT o TEXTCONTENT
+
+console.log(document.getElementById('titulo'));
 
 </script>
 </body>
