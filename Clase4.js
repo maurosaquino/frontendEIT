@@ -26,14 +26,19 @@ Codigos de respuesta
 408 Timeout
 500 Error del servidor (puede ser cualquier cosa)
 
-
 */
 
 //RS 0 - Inicializar
 let xhr = new XMLHttpRequest();
 
 //RS 1 - Configurar (METODO[GET,POST,PUT,PATCH,DELETE], URL, TIPO DE PEDIDO [BOOLEANO])
-xhr.open('GET','texto.txt');
+xhr.open('GET','archivo.json');
 
-//RS 2 - Enviar y recibir headers
+//RS 2,3,4 - Enviar y recibir headers, descargar y terminar
 xhr.send();
+
+/*EVENTOS DE XHR
+readyStateChange: se dispara cuando readystate cambia
+
+*/
+xhr.addEventListener('readystatechange',()=>console.log(xhr.readyState));
