@@ -41,4 +41,11 @@ xhr.send();
 readyStateChange: se dispara cuando readystate cambia
 
 */
-xhr.addEventListener('readystatechange',()=>console.log(xhr.readyState));
+xhr.addEventListener('readystatechange',()=>
+{
+    if(xhr.readyState == 4){
+      let div = document.createElement('div');
+      div.innerText = xhr.response;
+      document.body.appendChild(div);
+    };
+});
