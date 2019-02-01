@@ -1,91 +1,39 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+</head>
 <body>
+    <h1>Home</h1>
+        <nav>
+            <button id='perfil'>Perfil</button>
+            <button id='productos'>Productos</button>
+            <button id='upload'>Upload</button>
+        </nav>
+        <main>
 
-<h1 id='titulo'>TITULO</h1>
-<h2 class='subtitulo'>TITULO</h2>
-<style>
+        </main>
+        <div>
+            <h1>UPLOAD</h1>
+            
+                    <input id = 'archivo' type='file' name='archivo' >
+                    <button id='enviar'>Enviar</button>
+          
+        </div>
+        <div>
+            <h1>Imagen</h1>
+            <img id='imagendd' src='archivos/perfil.jpg' draggable="true">
+        </div>
+        <div id='box' style="width: 200px; height: 200px; background-color: red">
 
-    .titulo{
-        color:red;
-        font-size:48px;
-    }
-
-</style>
-<script>    
-var nombre;
-
-//VAR original son variables globales
-nombre='jhonatan';
-console.log(nombre);
-nombre=12;
-console.log(nombre);
-
-//CONST Las constantes const se deben inicializar
-const edad=23;
-console.log(edad);
-
-//LET definir variables de bloque el alcance esta definido entre {} 
-
-let apellido;
-apellido='gerardo';
-console.log(apellido);
-
-//LET Y CONST son de bloque
-
-{
-    let a = 'jorge';
-    console.log(a);
-}
-
-
-
-//FUNCION ANONIMA - SI NO DEFINO LA VARIABLE NO SE HACE DOBLE PASAJE ASI QUE LA EJECUCION DE LA FUNCION DEBE
-//ESTAR DESPUES DE LA DEFINICION DE LA VARIABLE
-
-var saludar = function(){
-    console.log(apellido);
-    
-}
-
-saludar();
-apellido='Miguel';
-saludar();
-
-//ARROW FUNCTION
-
-saludar = () => {console.log('heyo')};
-saludar = nombre => {console.log(nombre)}; //SI ES UN SOLO PARAMETRO NO HACE FALTA PARENTESIS
-saludar = (nombre,apellido)=>nombre+''+apellido; //EL CUERPO DE LA FUNCION ES SOLO UN RETURN
-
-var saludar_dos = (parametro) => {console.log(parametro)};
-console.log(saludar('Ramon','Perez'));
-saludar_dos('roberto');
-
-saludar = nombre=>nombre+' Y apellido'; //VERSION MAS RESUMIDA
-console.log(saludar('Martin'));
-
-window.innerHeight; //DICE CUANTO MIDE LA VENTANA el WINDOW.XXXX son las propiedades o atributos del objeto window
-
-window.history;
-window.location; // Toda la informacion del host y la ubicacion de la pagina
-window.document; // Es la informacion del nodo de la estructura del desgloce del documento.
-
-var h1 = document.getElementById('titulo');
-var h2 = document.getElementsByClassName('subtitulo');
-
-document.getElementById('titulo').innerText='APELLIDO'; //no reconoce las tags
-document.getElementById('titulo').innerHTML='NOMBRE'; //reconoce las tags
-h1.textContent='lala'; //???? BUSCAR DIFERENCIA ENTRE INNERTEXT o TEXTCONTENT
-
-console.log(document.getElementById('titulo'));
-console.log(h2[0].innerHTML);
-
-h2[0].id ='nuevoID';
-
-h2[0].classList.add('titulo'); //LE AGREGO UNA CLASE A LA LISTA DE CLASES
-h2[0].classList.toggle('subtitulo');
-
-
-</script>
+        </div>
+        <footer>
+            Todos los derechos reservados 2019
+        </footer>
+    <script src="main.js"></script>
 </body>
 </html>
